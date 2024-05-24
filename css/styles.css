@@ -1,0 +1,146 @@
+/*-------------------------------*/
+/*           GLOBAL              */
+/*-------------------------------*/
+
+:root {
+    --gris-reinge: #292828; /*Color para el header, footer y textos oscuros.*/
+    --gris-oscuro: #1B1919; /*Color para el background.*/
+    --gris-claro: #D9D9D9; /*Color para navegación y formularios.*/
+    --blanco-reinge: #FFFFFF; /*Blanco para textos*/
+  }
+
+html {
+    font-size: 62.5%; /*Esta linea hace que 1rem = 10px*/
+}
+
+body {
+    font-size: 1.6rem; 
+    background-color: var(--gris-oscuro);
+    margin: 0;
+    padding: 0;
+    font-family: "Monda", sans-serif;
+}
+
+/*-------------------------------*/
+/*           HEADER              */
+/*-------------------------------*/
+
+.navbar{
+    background-color: var(--gris-reinge);
+    height: 3.7rem;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgb(0, 0, 0, 0.12) 0px 10px 15px;
+}
+
+ul{
+    display: flex;
+    margin-right: 2rem;
+}
+
+.itemLista{
+    margin: auto;
+    font-weight: 501;
+    list-style-type: none;
+    color: var(--gris-oscuro);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3.9rem; 
+    font-size: 1.3rem;
+}
+
+ul a{
+    text-decoration: none;
+    background-color: var(--gris-claro);
+    border-radius: 1.3rem;
+    height: 3.9rem;
+    width: 10rem;
+    margin: 1rem;
+}
+
+ul a:active{
+    background-color: #b5b5b5;
+}   
+
+.logo{
+    height: 20rem;
+    margin-left: 2.3rem;
+    margin-top: 0.6rem;
+}
+
+.icono_celu{
+    height: 5rem;
+    margin-top: 0.4rem;
+    position: absolute;
+    z-index: 5;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.floatingButton{
+    background-color: red;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    z-index: 4;
+    position: absolute;
+    right: 1rem;
+    top: 8rem;
+    cursor: pointer;
+}
+
+
+/*-------------------------------*/
+/*           FOOTER              */
+/*-------------------------------*/
+
+
+footer{
+    background-color: var(--gris-reinge);
+    color: var(--blanco-reinge);
+    padding: 3.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo{
+    width: 25rem;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 10px 25px -1px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 10px 25px -1px rgba(0,0,0,0.36);
+    box-shadow: 0px 10px 25px -1px rgba(0,0,0,0.36);
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.footer-copy{
+    text-align: center;
+    color: rgba(255,255,255,0.41);
+    position: relative;
+    top: 3rem;
+}
+
+@media screen and (max-width:700px){
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-top .footer-logo{
+        order: 1;
+    }
+
+    .footer-top .footer-data{
+        padding-top: 4rem;
+        text-align: center;
+        order: 2;
+    }
+}
